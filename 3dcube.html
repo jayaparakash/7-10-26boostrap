@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            height: 100vh;
+        }
+        .container{
+            margin: 50px auto;
+            height: 250px;
+            width: 250px;
+            border: 1px solid;
+            perspective: 800px;
+        }
+
+        .cube{
+            height: 250px;
+            width: 250px;
+            border: 1px solid red;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: cube 5s linear 0.5s infinite alternate forwards ;
+        }
+
+          .slide{
+            height: 250px;
+            width: 250px;
+            border: 1px solid red;
+            position: absolute;
+        }
+
+        #front{
+            background-color: red;
+            transform: translateZ(125px);
+        }
+
+         #back{
+            background-color: blue;
+            transform: translateZ(-125px);
+        }
+
+         #left{
+            background-color: green;
+            transform: translatex(125px) rotatey(90deg);
+        }
+
+         #right{
+            background-color: blueviolet;
+            transform: translatex(-125px) rotatey(-90deg);
+        }
+
+
+          #top{
+            background-color: orangered;
+            transform: translatey(-125px) rotatex(90deg);
+        }
+
+         #bottom{
+            background-color:grey;
+            transform: translatey(125px) rotatex(-90deg);
+        }
+
+
+        @keyframes cube {
+
+            0%{
+                transform:rotateX(45deg) rotateY(45deg);
+            }
+           25%{
+            transform:rotateX(-45deg) rotateY(45deg);
+           }
+           50%{
+            transform:rotateX(-45deg) rotateY(-45deg);
+           }
+           75%{
+            transform:rotateX(45deg) rotateY(-45deg);
+           }
+          100%{
+            transform:rotateX(45deg) rotateY(45deg);
+          }
+
+
+            
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="slide" id="front"></div>
+            <div class="slide" id="back"></div>
+            <div class="slide" id="left"></div>
+            <div class="slide" id="right"></div>
+            <div class="slide" id="top"></div>
+            <div class="slide" id="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
