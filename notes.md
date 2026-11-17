@@ -56,7 +56,10 @@ opensource
         2)downloading NPM 
             install node 
                 npm i boostrap
-
         3)Throughlink downloading // copypaste the boot code
+
+
+git config --global user.name "jayaprakash"
+git config --global user.email "jpvirat@gmail.com"
 
  
