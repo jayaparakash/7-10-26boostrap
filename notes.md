@@ -62,4 +62,15 @@ opensource
 git config --global user.name "jayaprakash"
 git config --global user.email "jpvirat@gmail.com"
 
+
+
+<!-- 
+    git branch jp
+    git branch -d jp
+    git switch branch
+
+    git pull origin jp 
+
+ -->
+
  
